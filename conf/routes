@@ -1,0 +1,11 @@
+
+POST       /user                                                controllers.UserController.createUser()
+POST       /user/:userId/conversation                           controllers.ConversationController.createConversation(userId: Long)
+GET        /user/:userId/conversation/:conversationId           controllers.ConversationController.getConversation(userId: Long, conversationId: Long)
+
+POST       /conversation/:conversationId/message                controllers.ConversationController.addMessage(conversationId: Long)
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET        /assets/*file        controllers.Assets.at(path="/public", file)
+
